@@ -3,12 +3,11 @@ import sys
 
 
 def format_price(price):
-    '''Format price into pretty view'''
     try:
         price = "{:,.2f}".format(float(price)).replace(',', ' ')
         if price[-2:] == '00':
             price = price[:-3]
-    except:
+    except ValueError:
         pass
     return price
 
