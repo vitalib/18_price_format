@@ -17,7 +17,6 @@ class TestFormatPrice(unittest.TestCase):
                    )
 
     def test_known_values(self):
-        '''format_price should correctly format known values'''
         for price, formatted_price in self.known_values:
             self.assertEqual(
                           format_price.format_price(price),
